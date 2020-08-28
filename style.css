@@ -35,3 +35,17 @@ p{
 .studygirl{
     height: 50%;
 }
+
+#buttonsignup{
+  width: 300px;
+  height: 40px;
+}
+
+#buttonsignin{
+  width: 300px;
+  height: 40px;
+}
+
+#container{
+  text-alight: center;
+}

@@ -2,54 +2,61 @@
 <html>
 
 <head>
-    <title>Study With Me</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+  <title>Study With Me</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 
-    <!-- google signin -->
-    <!-- <meta name="google-signin-client_id" content="study-with-me-287801.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id"
-    content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
+  <!-- google signin -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
 </head>
 
 <body>
-    <div>
-        <img class="logo-light" src="images/light-logo.png" alt="logo.png">
-    </div>
-    <h1 class="login" style="text-align:center center; margin">study with me.</h1>
-    <p>We're all in this together</p>
 
+  <!-- logo -->
+  <div>
+    <img class="logo-light" src="images/light-logo.png" alt="logo.png">
+  </div>
 
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <div id="my-signin2"></div>
-    <script>
-        function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        }
+  <!-- text -->
+  <h1 class="login" style="text-align:center center; margin">study with me.</h1>
+  <p>find people to suffer with</p>
 
-        function onFailure(error) {
-            console.log(error);
-        }
+  <!-- buttons for sign in and sign up -->
+  <div id="container">
+    <!-- <button type="button signup" id="buttonsignup" style="margin-right: 20px;">sign up</button>
+    <button type="button signin" id="buttonsignin" style="margin-left: 20px;">sign in</button>
+  </div> -->
 
-        function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': true,
-                'theme': 'dark',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-        }
-    </script>
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+  <!-- google sign in and authorization -->
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <div id="my-signin2" style="position: center;"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
 
-    <img class="studygirl" src="images/sun.png" alt="lamp.png">
+    function onFailure(error) {
+      console.log(error);
+    }
+
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+</div>
+  <img class="studygirl" src="images/sun.png" alt="lamp.png">
 
 </body>
 
