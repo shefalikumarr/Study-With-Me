@@ -5,12 +5,15 @@ body, html{
   text-align: center;
 
 }
+.logo{
 
+}
 .login{
     /* background-image: linear-gradient(to bottom,#10065b, #060322); */
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 h1{
     font-family: 'Alegreya Sans', sans-serif;
     color: white;
