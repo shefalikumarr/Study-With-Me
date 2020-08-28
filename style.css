@@ -1,13 +1,13 @@
 body, html{
   margin: 0px;
   height: 100%;
-
+  background-image: linear-gradient(to bottom,#10065b, #060322);
   text-align: center;
 
 }
 
 .login{
-    background-image: linear-gradient(to bottom,#10065b, #060322);
+    /* background-image: linear-gradient(to bottom,#10065b, #060322); */
     background-repeat: no-repeat;
     background-size: cover;
 }
