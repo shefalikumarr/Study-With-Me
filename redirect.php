@@ -2,9 +2,9 @@
 require_once 'vendor/autoload.php';
 
 // init configuration
-$clientID = '<726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com>';
-$clientSecret = '<BXuWKk7vFuafgQmJNWr6-yID>';
-$redirectUri = '<https://shefalikumarr.github.io/Study-With-Me/signup.html>';
+$clientID = '726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com';
+$clientSecret = 'BXuWKk7vFuafgQmJNWr6-yID';
+$redirectUri = 'https://shefalikumarr.github.io/Study-With-Me/signup.html';
 
 // create Client Request to access Google API
 $client = new Google_Client();
