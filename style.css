@@ -6,13 +6,20 @@ body, html{
 
 }
 
-.logo-light{
-    margin-left: 5%;
+.dark-logo {
     position: relative;
-    height: 50px;
-    width: 50px;
-
+    margin-right: 90%;
+    margin-top: 4%;
+    height: 70px;
+    width: 70px;
 }
+
+.g-signin2{
+    position: relative;
+    text-align: center;
+}
+
+
 .login{
     /* background-image: linear-gradient(to bottom,#10065b, #060322); */
     background-repeat: no-repeat;
