@@ -25,9 +25,14 @@ body, html{
 }
 
 .g-signin2{
-    position: relative;
+    /* position: relative;
     text-align: center;
-    margin: auto;
+    margin: auto; */
+    width: 100%;
+}
+
+.g-signin2 > div{
+  margin: 0 auto;
 }
 
 
@@ -38,9 +43,9 @@ body, html{
     margin: auto;
 }
 
-#my-signin2{
+/* #my-signin2{
   position: center;
-}
+} */
 
 h1{
     font-family: 'Alegreya Sans', sans-serif;
