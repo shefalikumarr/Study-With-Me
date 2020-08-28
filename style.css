@@ -6,9 +6,19 @@ body, html{
 
 }
 
-.dark-logo {
+/* .dark-logo {
     position: relative;
     margin-right: 90%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    height: 5%;
+    width: 5%;
+} */
+
+.dark-logo {
+    float: left;
+    position: absolute;
+    left: 4%;
     margin-top: 4%;
     height: 70px;
     width: 70px;
@@ -31,6 +41,7 @@ h1{
     color: white;
     font-size: 85px;
     font-weight: 2px;
+    
 }
 
 p{
