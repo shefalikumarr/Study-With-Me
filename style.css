@@ -27,6 +27,7 @@ body, html{
 .g-signin2{
     position: relative;
     text-align: center;
+    left: 50%;
 }
 
 
@@ -41,7 +42,7 @@ h1{
     color: white;
     font-size: 85px;
     font-weight: 2px;
-    
+
 }
 
 p{
