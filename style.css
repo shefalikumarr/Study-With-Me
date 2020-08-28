@@ -27,7 +27,7 @@ body, html{
 .g-signin2{
     position: relative;
     text-align: center;
-    left: 50%;
+    margin: auto;
 }
 
 
@@ -35,6 +35,11 @@ body, html{
     /* background-image: linear-gradient(to bottom,#10065b, #060322); */
     background-repeat: no-repeat;
     background-size: cover;
+    margin: auto;
+}
+
+#my-signin2{
+  position: center;
 }
 
 h1{
