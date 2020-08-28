@@ -5,7 +5,12 @@ body, html{
   text-align: center;
 
 }
-.logo{
+
+.logo-light{
+    margin-left: 5%;
+    position: relative;
+    height: 50px;
+    width: 50px;
 
 }
 .login{
