@@ -1,0 +1,29 @@
+body, html{
+  margin: 0px;
+  height: 100%;
+
+  text-align: center;
+
+}
+
+.login{
+    background-image: linear-gradient(to bottom,#10065b, #060322);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-family: 'Alegreya Sans', sans-serif;
+    color: white;
+    font-size: 85px;
+    font-weight: 2px;
+}
+
+p{
+  color: gray;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 30px;
+}
+
+.studygirl{
+    height: 50%;
+}
