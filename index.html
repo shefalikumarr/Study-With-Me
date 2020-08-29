@@ -94,6 +94,17 @@
 
 </div>
 
+<!-- Sign out link for button -->
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+ function signOut() {
+   var auth2 = gapi.auth2.getAuthInstance();
+   auth2.signOut().then(function () {
+     console.log('User signed out.');
+   });
+ }
+</script>
+
  <img class="studygirl" src="images/sun.png" alt="lamp.png">
 
 </body>
@@ -106,30 +117,12 @@
 
 
 <!-- Sign out link for button -->
-
-
 <!-- <a href="#" onclick="signOut();">Sign out</a>
-
-
 <script>
-
-
  function signOut() {
-
-
    var auth2 = gapi.auth2.getAuthInstance();
-
-
    auth2.signOut().then(function () {
-
-
      console.log('User signed out.');
-
-
    });
-
-
  }
-
-
 </script> -->
