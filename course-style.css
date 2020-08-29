@@ -11,8 +11,13 @@ h1 {
     margin-left: 2%;
     margin-top: 1%;
     font-weight: bold;
-    ;
+    display: inline-block;
     position: relative;
+}
+
+a{
+    float: right;
+    margin-top: 10px;
 }
 
 

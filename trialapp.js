@@ -20,10 +20,10 @@
 
   const dbRefObject = firebase.database().ref().child('Students');
 
-  const dbRefList = dbRefObject.child('ej10000');
+  const dbRefList = dbRefObject.child('Armin Arlelt');
 
-  console.log(dbRefObject.child('ej10000'));
-  const object = dbRefObject.child('ej10000');
+  console.log(dbRefObject.child('Armin Arlelt'));
+  const object = dbRefObject.child('Armin Arlelt');
   // const temp = object.get("Major");
 
 

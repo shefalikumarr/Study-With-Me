@@ -1,52 +1,149 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dashboard-style.css">
-    <link rel="stylesheet" href="css/chat-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
-    <title>Messages</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand mr-5" href="#">
-        <img src="images/light-logo.png" width="70" height="70" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item mr-5">
-            <a class="nav-link navbar-font" href="dashboard.html">HOME<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link navbar-font mr-5" href="messages.html">MESSAGES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navbar-font dropdown-toggle" href="#" id="navbarDropdownMenuLink"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">PROFILE</a>
-              <a class="dropdown-item" href="#">LOG OUT</a>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="dashboard-style.css">
+  <link rel="stylesheet" href="chat-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <title>Messages</title>
+</head>
+
+<body>
+
+  <!-- Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand mr-5" href="#">
+      <img src="images/light-logo.png" width="70" height="70" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item mr-5">
+          <a class="nav-link navbar-font" href="dashboard.html">HOME<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link navbar-font mr-5" href="messages.html">MESSAGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-font dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">PROFILE</a>
+            <a class="dropdown-item" href="#">LOG OUT</a>
           </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search Group">
-          <button class="btn btn-outline-primary my-2 my-sm-0 navbar-font " type="submit">Search</button>
-        </form>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Group">
+        <button class="btn btn-outline-primary my-2 my-sm-0 navbar-font " type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+<!-- Chat window -->
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-4 border-right">
+        <div class="settings-tray">
+          <img class="profile-image" src="images/empty-profile.png" alt="Profile img">
+          <span class="settings-tray ml-auto">
+            <i class="material-icons">cached</i>
+            <i class="material-icons">message</i>
+            <i class="material-icons">menu</i>
+          </span>
+        </div>
+        <div class="search-box">
+          <div class="input-wrapper">
+            <i class="material-icons">search</i>
+            <input placeholder="Search here" type="text">
+          </div>
+        </div>
+        <div class="friend-drawer">
+          <img class="profile-image" src="images/empty-profile.png" alt="">
+          <div class="text ml-3">
+            <h6>Mikasa</h6>
+            <p class="text-muted">Wanna work on 2800?</p>
+          </div>
+          <span class="time text-muted small ml-auto">17:21</span>
+        </div>
+        <hr>
+        <div class="friend-drawer">
+          <img class="profile-image" src="images/empty-profile.png" alt="">
+          <div class="text ml-3">
+            <h6>Levi Ackermann</h6>
+            <p class="text-muted">When should we start our project?</p>
+          </div>
+          <span class="time text-muted small ml-auto">19:51</span>
+        </div>
+        <hr>
       </div>
-    </nav>
+      <div class="col-md-8">
+        <div class="settings-tray">
+          <div class="friend-drawer no-gutters">
+            <img class="profile-image" src="images/empty-profile.png" alt="">
+            <div class="text ml-3">
+              <h6>Eren Jaeger</h6>
+              <p class="text-muted">One giant at a time <3</p>
+            </div>
+            <span class="settings-tray ml-auto">
+              <i class="material-icons">cached</i>
+              <i class="material-icons">message</i>
+              <i class="material-icons">menu</i>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <div class="chat-bubble mr-0">
+                Hey! Saw you join the 2800 group!
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <div class="chat-bubble">
+                Do you want to work on HW together?
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <div class="chat-bubble">
+                I have time on Friday if that works :)
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="chat-box-tray">
+                <i class="material-icons mx-1">sentiment_very_satisfied</i>
+                <input type="text" placeholder="Type your message here...">
+                <i class="material-icons ml-2 mr-1">mic</i>
+                <i class="material-icons mx-1">photo</i>
+                <i class="material-icons mx-1">send</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+</body>
 
-
-
-  </body>
 </html>

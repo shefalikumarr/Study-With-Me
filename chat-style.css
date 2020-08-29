@@ -1,0 +1,89 @@
+.container {
+  margin: 60px auto;
+  background: white;
+  padding: 0;
+  border-radius: 7px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+
+.settings-tray {
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+}
+
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: #fff;
+  transition: .3s ease;
+}
+
+.text {
+  margin-left: 12px;
+  width: 70%;
+}
+h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+}
+
+
+.time {
+  color: grey;
+}
+
+
+hr {
+  margin: 5px auto;
+  width: 60%;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  background: #eee;
+  margin: 10px 30px;
+  border-radius: 9px;
+  position: relative;
+}
+
+
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+
+}
+
+input {
+  margin: 0 10px;
+  padding: 6px 2px;
+}
+
+i {
+  color: grey;
+  font-size: 30px;
+  vertical-align: middle;
+}
