@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/course-style.css" />
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dashboard-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.21/r-2.2.5/sc-2.0.2/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.21/r-2.2.5/sc-2.0.2/datatables.min.js"></script>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/light-logo.png" width="70" height="70" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item  ml-4 mr-5 active">
+                    <a class="nav-link navbar-font" href="dashboard.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-font mr-5" href="#">MESSAGES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-font" href=signup.html>PROFILE</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Group">
+                <button class="btn btn-outline-primary my-2 my-sm-0 navbar-font " type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- course name -->
+    <div class="container">
+        <div class="course-name">
+            <h1>
+                CS2110: Object-Oriented Programming
+            </h1>
+        </div>
+
+        <!-- Student Table -->
+        <div class="student-table">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th scope="col">Student</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">School</th>
+                        <th scope="col">Major</th>
+                        <th scope="col">Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Saiki Kusou</td>
+                        <td>2023</td>
+                        <td>CAS</td>
+                        <td>Psychology</td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ash Lynx</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Levi Ackerman</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Edward Elric</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Light Yagami</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Kurisu Makise</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ezra Cornell</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Shoto Todoroki</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Roy Mustang</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sebastian Michaelis</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="message.html">Message</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "scrollY": "300px",
+                "scrollCollapse": true,
+                "paging": false
+            });
+        });
+    </script>
+</body>
+
+</html>

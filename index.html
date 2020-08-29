@@ -9,13 +9,13 @@
  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 
+ <a href="signup.html" class="button">Start</a>
+
  <!-- google signin -->
  <script src="https://apis.google.com/js/platform.js" async defer></script>
-
  <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
 
 </head>
-
 <body>
 
  <!-- logo -->
@@ -28,18 +28,19 @@
  <p>find people to suffer with</p>
 
  <!-- buttons for sign in and sign up -->
+
  <div id="container">
+
    <!-- <button type="button signup" id="buttonsignup" style="margin-right: 20px;">sign up</button>
    <button type="button signin" id="buttonsignin" style="margin-left: 20px;">sign in</button>
  </div> -->
  <!-- google sign in and authorization -->
  <!-- <div class="g-signin2" data-onsuccess="onSignIn" style="position: center;"></div> -->
+
  <div class="g-signin2" data-onsuccess="onSignIn"
        -theme="light" data-width="300" data-height="50"
        data-longtitle="true">button</div>
-
  <div id="my-signin2" style="position: center;"></div>
-
  <script>
  function onSignIn(googleUser) {
        // Useful data for your client-side scripts:
@@ -66,11 +67,11 @@
    function onSuccess(googleUser) {
      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
      <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
-
    }
 
    function onFailure(error) {
      console.log(error);
+
    }
 
    function renderButton() {
@@ -84,16 +85,21 @@
        'onfailure': onFailure
      });
    }
- </script>
 
+ </script>
  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+
 </div>
-<a href="signup.html" class="button">Start</a>
+
  <img class="studygirl" src="images/sun.png" alt="lamp.png">
 
 </body>
-
 </html>
+
+
+
+
+
 
 
 <!-- Sign out link for button -->

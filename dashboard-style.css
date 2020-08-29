@@ -1,0 +1,29 @@
+body {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 50px;
+}
+
+.navbar-font{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 20px;
+}
+.group-font{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.group-button{
+  margin-top: 30px;
+  padding: 120px 150px 120px 150px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.empty{
+  background-color: #DEE1E6;
+}
+
+.class-button{
+
+}

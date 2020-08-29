@@ -1,0 +1,36 @@
+body {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: black;
+    /* font-size: 85px; */
+    margin-left: 2%;
+    margin-top: 1%;
+    font-weight: bold;
+    ;
+    position: relative;
+}
+
+
+.navbar-font {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+}
+
+.container{
+    position: absolute;
+}
+
+.student-table {
+    margin-left: 2%;
+    width: 100%;
+    position: relative;
+}
+
+.empty {
+    background-color: #DEE1E6;
+}
