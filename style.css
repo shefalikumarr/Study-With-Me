@@ -9,7 +9,6 @@ body, html{
 /* .dark-logo {
     position: relative;
     margin-right: 90%;
-    margin-top: 4%;
     margin-bottom: 1%;
     height: 5%;
     width: 5%;
@@ -40,7 +39,6 @@ body, html{
     float: left;
     position: absolute;
     left: 4%;
-    margin-top: 4%;
     height: 70px;
     width: 70px;
 }
