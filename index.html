@@ -3,6 +3,9 @@
 <html>
 <head>
  <title>Study With Me</title>
+
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
  <link rel="stylesheet" href="style.css">
 
  <!-- fonts -->
@@ -54,6 +57,49 @@
        console.log("email");
        console.log("Email: " + profile.getEmail());
 
+       // <pre id="Students"></pre>
+       // <ul id="list"></ul>
+       //
+       // <script>
+       //
+       // function(){
+       //
+       //   const config = {
+       //     apiKey: "AIzaSyAs7S6FmloEdGYJ9fK_psPxdQU8b-ZAvi4",
+       //     authDomain: "study-with-me-287801.firebaseapp.com",
+       //     databaseURL: "https://study-with-me-287801.firebaseio.com",
+       //     storageBucket: "study-with-me-287801.appspot.com",
+       //   };
+       //   firebase.initializeApp(config);
+       //
+       //   // const preObject = document.getElementById('Students');
+       //   // const uList = document.getElementById('list');
+       //   //
+       //   // const dbRefObject = firebase.database().ref().child('Students');
+       //   // const dbRefList = dbRefObject.child('ej10000');
+       //   var db = firebase.database();
+       //
+       //   const preObject = document.getElementById('Students');
+       //   const ulList = document.getElementById('list');
+       //
+       //   const dbRefObject = firebase.database().ref().child('Students');
+       //
+       //   const dbRefList = dbRefObject.child(profile.getName());
+       //   document.location.href = dbRefObject.child(profile.getName()).child('redirect');
+       //   // dbRefList.set({
+       //   //   hello: "oh okay",
+       //   //   wow: "hiiii"
+       //   // });
+       //
+       //
+       //   // dbRefObject.on('value', snap => console.log(snap.val()));
+       //   dbRefObject.on('value', snap => {
+       //     preObject.innerText = JSON.stringify(snap.val(), null, 3);
+       //   });
+       //
+       //
+       // };
+       // </script>
 
        // The ID token you need to pass to your backend:
        var id_token = googleUser.getAuthResponse().id_token;
@@ -68,6 +114,7 @@
      };
 
    function onSuccess(googleUser) {
+     console.log('yay signed in!');
      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
      // <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
    }

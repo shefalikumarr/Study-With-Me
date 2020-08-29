@@ -15,12 +15,18 @@
   // const dbRefList = dbRefObject.child('ej10000');
   var db = firebase.database();
 
-  const preObject = document.getElementById('object');
+  const preObject = document.getElementById('Students');
   const ulList = document.getElementById('list');
 
-  const dbRefObject = firebase.database().ref().child('object');
+  const dbRefObject = firebase.database().ref().child('Students');
 
-  const dbRefList = dbRefObject.child('m1111');
+  const dbRefList = dbRefObject.child('ej10000');
+
+  console.log(dbRefObject.child('ej10000'));
+  const object = dbRefObject.child('ej10000');
+  // const temp = object.get("Major");
+
+
   // dbRefList.set({
   //   hello: "oh okay",
   //   wow: "hiiii"
@@ -31,6 +37,8 @@
   dbRefObject.on('value', snap => {
     preObject.innerText = JSON.stringify(snap.val(), null, 3);
   });
+
+
 
   // dbRefList.on('child_added', snap => console.log(snap.val()));
   dbRefList.on('child_added', snap => {
