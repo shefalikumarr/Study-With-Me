@@ -60,44 +60,7 @@
             document.location.href = https: //shefalikumarr.github.io/Study-With-Me/signup.html
           });
 
-        console.log('Google Auth Response', googleUser);
-        // We need to register an Observer on Firebase Auth to make sure auth is initialized.
-        var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
-          unsubscribe();
-          // Check if we are already signed-in Firebase with the correct user.
-          if (!isUserEqual(googleUser, firebaseUser)) {
-            // Build Firebase credential with the Google ID token.
-            var credential = firebase.auth.GoogleAuthProvider.credential(
-              googleUser.getAuthResponse().id_token);
-            // Sign in with credential from the Google user.
-            firebase.auth().signInWithCredential(credential).catch(function(error) {
-              // Handle Errors here.
-              var errorCode = error.code;
-              var errorMessage = error.message;
-              // The email of the user's account used.
-              var email = error.email;
-              // The firebase.auth.AuthCredential type that was used.
-              var credential = error.credential;
-              // ...
-            });
-          } else {
-            console.log('User already signed-in Firebase.');
-          }
-        });
-      }
 
-      function isUserEqual(googleUser, firebaseUser) {
-        if (firebaseUser) {
-          var providerData = firebaseUser.providerData;
-          for (var i = 0; i < providerData.length; i++) {
-            if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
-              providerData[i].uid === googleUser.getBasicProfile().getId()) {
-              // We don't need to reauth the Firebase connection.
-              return true;
-            }
-          }
-        }
-        return false;
       }
 
       function onSuccess(googleUser) {
@@ -130,29 +93,56 @@
 
   <!-- <img class="studygirl" src="images/sun.png" alt="lamp.png"> -->
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+ <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+ <script src="/__/firebase/7.19.1/firebase-app.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAWyrdvxyrquRR1WPsBx-HOQC3G7i7POy0",
-      authDomain: "study-with-me-460bd.firebaseapp.com",
-      databaseURL: "https://study-with-me-460bd.firebaseio.com",
-      projectId: "study-with-me-460bd",
-      storageBucket: "study-with-me-460bd.appspot.com",
-      messagingSenderId: "883086576807",
-      appId: "1:883086576807:web:2add33506c9afd4ad2df82",
-      measurementId: "G-L9C2TR64CJ"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+ <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+ <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+ <!-- Add Firebase products that you want to use -->
+ <script src="/__/firebase/7.19.1/firebase-auth.js"></script>
+ <script src="/__/firebase/7.19.1/firebase-firestore.js"></script>
+
+ <!-- Previously loaded Firebase SDKs -->
+ <!-- Initialize Firebase -->
+ <script src="/__/firebase/init.js"></script>
+ <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAs7S6FmloEdGYJ9fK_psPxdQU8b-ZAvi4",
+    authDomain: "study-with-me-287801.firebaseapp.com",
+    databaseURL: "https://study-with-me-287801.firebaseio.com",
+    projectId: "study-with-me-287801",
+    storageBucket: "study-with-me-287801.appspot.com",
+    messagingSenderId: "726413645124",
+    appId: "1:726413645124:web:d6f1f2d8a0355b9be27311",
+    measurementId: "G-Q5JTQ12R4M"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+</script>
   <img class="studygirl" src="images/sun.png" alt="lamp.png">
 </body>
 
