@@ -63,13 +63,13 @@
            // and the user should now have a session cookie
            // for the whole site.
            // document.location.href = '/dashboard/' + user.username
-           document.location.href = https://shefalikumarr.github.io/Study-With-Me/signup.html
+           document.location.href = shefalikumarr.github.io/Study-With-Me/signup.html
        })
      };
 
    function onSuccess(googleUser) {
      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-     <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
+     // <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
    }
 
    function onFailure(error) {
@@ -95,7 +95,7 @@
 </div>
 
 <!-- Sign out link for button -->
-<a href="#" onclick="signOut();">Sign out</a>
+<a href="#" class="button" onclick="signOut();">Sign out</a>
 <script>
  function signOut() {
    var auth2 = gapi.auth2.getAuthInstance();
