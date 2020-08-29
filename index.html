@@ -1,152 +1,101 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
+ <title>Study With Me</title>
+ <link rel="stylesheet" href="style.css">
 
-  <title>Study With Me</title>
-  <link rel="stylesheet" href="style.css">
+ <!-- fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+   <a href="signup.html" class="button">Start</a>
+ <!-- google signin -->
+ <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-  <!-- google signin -->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
-  <meta name="google-signin-cookiepolicy" content="https://shefalikumarr.github.io">
-  <meta name="google-signin-scope" content="sk2432@cornell.edu">
+ <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
 
 </head>
 
 <body>
-  <!-- logo -->
-  <div>
-    <img class="dark-logo" src="images/dark-logo.png" alt="logo.png">
+
+ <!-- logo -->
+ <div>
+      <img class="dark-logo" src="images/dark-logo.png" alt="logo.png">
   </div>
 
-  <!-- text -->
-  <h1 class="login" style="text-align:center center;">study with me.</h1>
-  <p>find people to suffer with</p>
+ <!-- text -->
+ <h1 class="login" style="text-align:center center;">study with me.</h1>
+ <p>find people to suffer with</p>
 
-  <!-- buttons for sign in and sign up -->
-  <div id="container">
-    <!-- <button type="button signup" id="buttonsignup" style="margin-right: 20px;">sign up</button>
+ <!-- buttons for sign in and sign up -->
+ <div id="container">
+   <!-- <button type="button signup" id="buttonsignup" style="margin-right: 20px;">sign up</button>
    <button type="button signin" id="buttonsignin" style="margin-left: 20px;">sign in</button>
  </div> -->
-    <!-- google sign in and authorization -->
-    <!-- <div class="g-signin2" data-onsuccess="onSignIn" style="position: center;"></div> -->
-    <div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50" data-longtitle="true">button</div>
-    <div id="my-signin2" style="position: center;"></div>
-    <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        postAJAX('/server/sign-in', {
-            id_token: id_token
-          })
-          .then(function(user) {
-            // The user is now signed in on the server too
-            // and the user should now have a session cookie
-            // for the whole site.
-            // document.location.href = '/dashboard/' + user.username
-            document.location.href = https: //shefalikumarr.github.io/Study-With-Me/signup.html
-          });
+ <!-- google sign in and authorization -->
+ <!-- <div class="g-signin2" data-onsuccess="onSignIn" style="position: center;"></div> -->
+ <div class="g-signin2" data-onsuccess="onSignIn"
+       -theme="light" data-width="300" data-height="50"
+       data-longtitle="true">button</div>
 
+ <div id="my-signin2" style="position: center;"></div>
 
-      }
-
-      function onSuccess(googleUser) {
-        console.log('Logged in as: ' + googleUser.getBasicProfile().getName()); <
-        meta http - equiv = "refresh"
-        content = "0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" / >
-
-      }
-
-      function onFailure(error) {
-        console.log(error);
-      }
-
-      function renderButton() {
-        gapi.signin2.render('my-signin2', {
-          'scope': 'profile email',
-          'width': 240,
-          'height': 50,
-          'longtitle': true,
-          'theme': 'dark',
-          'onsuccess': onSuccess,
-          'onfailure': onFailure
-        });
-      }
-    </script>
-
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
-
-  </div>
-
-  <!-- <img class="studygirl" src="images/sun.png" alt="lamp.png"> -->
-
-  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-
- <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
- <script src="/__/firebase/7.19.1/firebase-app.js"></script>
-
- <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
- <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
-
- <!-- Add Firebase products that you want to use -->
- <script src="/__/firebase/7.19.1/firebase-auth.js"></script>
- <script src="/__/firebase/7.19.1/firebase-firestore.js"></script>
-
- <!-- Previously loaded Firebase SDKs -->
- <!-- Initialize Firebase -->
- <script src="/__/firebase/init.js"></script>
  <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAs7S6FmloEdGYJ9fK_psPxdQU8b-ZAvi4",
-    authDomain: "study-with-me-287801.firebaseapp.com",
-    databaseURL: "https://study-with-me-287801.firebaseio.com",
-    projectId: "study-with-me-287801",
-    storageBucket: "study-with-me-287801.appspot.com",
-    messagingSenderId: "726413645124",
-    appId: "1:726413645124:web:d6f1f2d8a0355b9be27311",
-    measurementId: "G-Q5JTQ12R4M"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+ function onSignIn(googleUser) {
+       // Useful data for your client-side scripts:
+       var profile = googleUser.getBasicProfile();
+       console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+       console.log('Full Name: ' + profile.getName());
+       console.log('Given Name: ' + profile.getGivenName());
+       console.log('Family Name: ' + profile.getFamilyName());
+       console.log("Image URL: " + profile.getImageUrl());
+       console.log("Email: " + profile.getEmail());
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+       // The ID token you need to pass to your backend:
+       var id_token = googleUser.getAuthResponse().id_token;
+       postAJAX('/server/sign-in', {id_token: id_token})
+       .then(function(user) {
+           // The user is now signed in on the server too
+           // and the user should now have a session cookie
+           // for the whole site.
+           // document.location.href = '/dashboard/' + user.username
+           document.location.href = https://shefalikumarr.github.io/Study-With-Me/signup.html
+       })
+     };
 
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-</script>
-  <img class="studygirl" src="images/sun.png" alt="lamp.png">
+   function onSuccess(googleUser) {
+     console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+     <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
+
+   }
+
+   function onFailure(error) {
+     console.log(error);
+   }
+
+   function renderButton() {
+     gapi.signin2.render('my-signin2', {
+       'scope': 'profile email',
+       'width': 240,
+       'height': 50,
+       'longtitle': true,
+       'theme': 'dark',
+       'onsuccess': onSuccess,
+       'onfailure': onFailure
+     });
+   }
+ </script>
+
+ <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
+</div>
+
+ <img class="studygirl" src="images/sun.png" alt="lamp.png">
+
 </body>
 
 </html>
+
 
 <!-- Sign out link for button -->
 
