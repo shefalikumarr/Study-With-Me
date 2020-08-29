@@ -3,9 +3,6 @@
 <html>
 <head>
  <title>Study With Me</title>
-
-<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-
  <link rel="stylesheet" href="style.css">
 
  <!-- fonts -->
@@ -43,63 +40,17 @@
  <div class="g-signin2" data-onsuccess="onSignIn"
        -theme="light" data-width="300" data-height="50"
        data-longtitle="true">button</div>
- <!-- <div id="my-signin2" style="position: center;"></div> -->
+ <div id="my-signin2" style="position: center;"></div>
  <script>
  function onSignIn(googleUser) {
        // Useful data for your client-side scripts:
        var profile = googleUser.getBasicProfile();
        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-       console.log("name");
        console.log('Full Name: ' + profile.getName());
        console.log('Given Name: ' + profile.getGivenName());
        console.log('Family Name: ' + profile.getFamilyName());
        console.log("Image URL: " + profile.getImageUrl());
-       console.log("email");
        console.log("Email: " + profile.getEmail());
-
-       // <pre id="Students"></pre>
-       // <ul id="list"></ul>
-       //
-       // <script>
-       //
-       // function(){
-       //
-       //   const config = {
-       //     apiKey: "AIzaSyAs7S6FmloEdGYJ9fK_psPxdQU8b-ZAvi4",
-       //     authDomain: "study-with-me-287801.firebaseapp.com",
-       //     databaseURL: "https://study-with-me-287801.firebaseio.com",
-       //     storageBucket: "study-with-me-287801.appspot.com",
-       //   };
-       //   firebase.initializeApp(config);
-       //
-       //   // const preObject = document.getElementById('Students');
-       //   // const uList = document.getElementById('list');
-       //   //
-       //   // const dbRefObject = firebase.database().ref().child('Students');
-       //   // const dbRefList = dbRefObject.child('ej10000');
-       //   var db = firebase.database();
-       //
-       //   const preObject = document.getElementById('Students');
-       //   const ulList = document.getElementById('list');
-       //
-       //   const dbRefObject = firebase.database().ref().child('Students');
-       //
-       //   const dbRefList = dbRefObject.child(profile.getName());
-       //   document.location.href = dbRefObject.child(profile.getName()).child('redirect');
-       //   // dbRefList.set({
-       //   //   hello: "oh okay",
-       //   //   wow: "hiiii"
-       //   // });
-       //
-       //
-       //   // dbRefObject.on('value', snap => console.log(snap.val()));
-       //   dbRefObject.on('value', snap => {
-       //     preObject.innerText = JSON.stringify(snap.val(), null, 3);
-       //   });
-       //
-       //
-       // };
-       // </script>
 
        // The ID token you need to pass to your backend:
        var id_token = googleUser.getAuthResponse().id_token;
@@ -109,14 +60,13 @@
            // and the user should now have a session cookie
            // for the whole site.
            // document.location.href = '/dashboard/' + user.username
-           document.location.href = shefalikumarr.github.io/Study-With-Me/signup.html
+           document.location.href = https://shefalikumarr.github.io/Study-With-Me/signup.html
        })
      };
 
    function onSuccess(googleUser) {
-     console.log('yay signed in!');
      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-     // <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
+     <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
    }
 
    function onFailure(error) {
@@ -141,17 +91,6 @@
 
 </div>
 
-<!-- Sign out link for button -->
-<a href="#" class="button" onclick="signOut();">Sign out</a>
-<script>
- function signOut() {
-   var auth2 = gapi.auth2.getAuthInstance();
-   auth2.signOut().then(function () {
-     console.log('User signed out.');
-   });
- }
-</script>
-
  <img class="studygirl" src="images/sun.png" alt="lamp.png">
 
 </body>
@@ -164,7 +103,10 @@
 
 
 <!-- Sign out link for button -->
+
+
 <!-- <a href="#" onclick="signOut();">Sign out</a>
+<a href="#" class="button" onclick="signOut();">Sign out</a>
 <script>
  function signOut() {
    var auth2 = gapi.auth2.getAuthInstance();
@@ -172,4 +114,28 @@
      console.log('User signed out.');
    });
  }
+</script>
+
+
+<script>
+
+
+ function signOut() {
+
+
+   var auth2 = gapi.auth2.getAuthInstance();
+
+
+   auth2.signOut().then(function () {
+
+
+     console.log('User signed out.');
+
+
+   });
+
+
+ }
+
+
 </script> -->
