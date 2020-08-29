@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<!-- The top of file index.html -->
-<html itemscope itemtype="http://schema.org/Article">
-
 <head>
+
   <title>Study With Me</title>
   <link rel="stylesheet" href="style.css">
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
@@ -14,33 +12,13 @@
   <!-- google signin -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
-  <!-- BEGIN Pre-requisites -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
-  </script>
-  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
-  </script>
-  <!-- END Pre-requisites -->
-  <script>
-    function start() {
-      gapi.load('auth2', function() {
-        auth2 = gapi.auth2.init({
-          client_id: '726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com',
-          // Scopes to request in addition to 'profile' and 'email'
-          //scope: 'additional_scope'
-        });
-      });
-    }
-  </script>
 
 </head>
-
 <body>
-
   <!-- logo -->
   <div>
-       <img class="dark-logo" src="images/dark-logo.png" alt="logo.png">
-   </div>
-
+    <img class="dark-logo" src="images/dark-logo.png" alt="logo.png">
+  </div>
 
   <!-- text -->
   <h1 class="login" style="text-align:center center;">study with me.</h1>
@@ -49,17 +27,14 @@
   <!-- buttons for sign in and sign up -->
   <div id="container">
     <!-- <button type="button signup" id="buttonsignup" style="margin-right: 20px;">sign up</button>
-    <button type="button signin" id="buttonsignin" style="margin-left: 20px;">sign in</button>
-  </div> -->
-
-  <!-- google sign in and authorization -->
-  <!-- <div class="g-signin2" data-onsuccess="onSignIn" style="position: center;"></div> -->
-  <div class="g-signin2" data-onsuccess="onSignIn"
-        -theme="light" data-width="300" data-height="50"
-        data-longtitle="true">button</div>
-  <div id="my-signin2" style="position: center;"></div>
-  <script>
-  function onSignIn(googleUser) {
+   <button type="button signin" id="buttonsignin" style="margin-left: 20px;">sign in</button>
+ </div> -->
+    <!-- google sign in and authorization -->
+    <!-- <div class="g-signin2" data-onsuccess="onSignIn" style="position: center;"></div> -->
+    <div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="300" data-height="50" data-longtitle="true">button</div>
+    <div id="my-signin2" style="position: center;"></div>
+    <script>
+      function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -68,97 +43,105 @@
         console.log('Family Name: ' + profile.getFamilyName());
         console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
-
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
-        postAJAX('/server/sign-in', {id_token: id_token})
-        .then(function(user) {
+        postAJAX('/server/sign-in', {
+            id_token: id_token
+          })
+          .then(function(user) {
             // The user is now signed in on the server too
             // and the user should now have a session cookie
             // for the whole site.
             // document.location.href = '/dashboard/' + user.username
-            document.location.href = https://shefalikumarr.github.io/Study-With-Me/signup.html
-        })
-
+            document.location.href = https: //shefalikumarr.github.io/Study-With-Me/signup.html
+          })
 
       };
-    function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-      <meta http-equiv="refresh" content="0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" />
 
-    }
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        <
+        meta http - equiv = "refresh"
+        content = "0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" / >
 
-    function onFailure(error) {
-      console.log(error);
-    }
+      }
 
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
-</div>
-  <img class="studygirl" src="images/sun.png" alt="lamp.png">
+      function onFailure(error) {
+        console.log(error);
+      }
 
-  <!-- Last part of BODY element in file index.html -->
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
 
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> -->
 
-<!-- Add where you want your sign-in button to render -->
-<!-- Use an image that follows the branding guidelines in a real app -->
-<button id="signinButton">Sign in with Google</button>
+  </div>
+
+  <!-- <img class="studygirl" src="images/sun.png" alt="lamp.png"> -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
 <script>
-  $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
-    auth2.grantOfflineAccess().then(signInCallback);
-  });
-
-function signInCallback(authResult) {
-  if (authResult['code']) {
-
-    // Hide the sign-in button now that the user is authorized, for example:
-    $('#signinButton').attr('style', 'display: none');
-
-    // Send the code to the server
-    $.ajax({
-      type: 'POST',
-      url: 'http://example.com/storeauthcode',
-      // Always include an `X-Requested-With` header in every AJAX request,
-      // to protect against CSRF attacks.
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      },
-      contentType: 'application/octet-stream; charset=utf-8',
-      success: function(result) {
-        // Handle or verify the server response.
-      },
-      processData: false,
-      data: authResult['code']
-    });
-  } else {
-    // There was an error.
-  }
-}
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAWyrdvxyrquRR1WPsBx-HOQC3G7i7POy0",
+    authDomain: "study-with-me-460bd.firebaseapp.com",
+    databaseURL: "https://study-with-me-460bd.firebaseio.com",
+    projectId: "study-with-me-460bd",
+    storageBucket: "study-with-me-460bd.appspot.com",
+    messagingSenderId: "883086576807",
+    appId: "1:883086576807:web:2add33506c9afd4ad2df82",
+    measurementId: "G-L9C2TR64CJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 </script>
-<img class="studygirl" src="images/sun.png" alt="lamp.png">
+ <img class="studygirl" src="images/sun.png" alt="lamp.png">
 </body>
 
 </html>
 
 <!-- Sign out link for button -->
+
+
 <!-- <a href="#" onclick="signOut();">Sign out</a>
+
+
 <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+
+
+ function signOut() {
+
+
+   var auth2 = gapi.auth2.getAuthInstance();
+
+
+   auth2.signOut().then(function () {
+
+
+     console.log('User signed out.');
+
+
+   });
+
+
+ }
+
+
 </script> -->
