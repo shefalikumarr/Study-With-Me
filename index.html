@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <title>Study With Me</title>
@@ -12,8 +13,11 @@
   <!-- google signin -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="726413645124-5a00kpt4p0r1fk1k67hb4r6ah3m69j25.apps.googleusercontent.com">
+  <meta name="google-signin-cookiepolicy" content="https://shefalikumarr.github.io">
+  <meta name="google-signin-scope" content="sk2432@cornell.edu">
 
 </head>
+
 <body>
   <!-- logo -->
   <div>
@@ -54,13 +58,50 @@
             // for the whole site.
             // document.location.href = '/dashboard/' + user.username
             document.location.href = https: //shefalikumarr.github.io/Study-With-Me/signup.html
-          })
+          });
 
-      };
+        console.log('Google Auth Response', googleUser);
+        // We need to register an Observer on Firebase Auth to make sure auth is initialized.
+        var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+          unsubscribe();
+          // Check if we are already signed-in Firebase with the correct user.
+          if (!isUserEqual(googleUser, firebaseUser)) {
+            // Build Firebase credential with the Google ID token.
+            var credential = firebase.auth.GoogleAuthProvider.credential(
+              googleUser.getAuthResponse().id_token);
+            // Sign in with credential from the Google user.
+            firebase.auth().signInWithCredential(credential).catch(function(error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              // The email of the user's account used.
+              var email = error.email;
+              // The firebase.auth.AuthCredential type that was used.
+              var credential = error.credential;
+              // ...
+            });
+          } else {
+            console.log('User already signed-in Firebase.');
+          }
+        });
+      }
+
+      function isUserEqual(googleUser, firebaseUser) {
+        if (firebaseUser) {
+          var providerData = firebaseUser.providerData;
+          for (var i = 0; i < providerData.length; i++) {
+            if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
+              providerData[i].uid === googleUser.getBasicProfile().getId()) {
+              // We don't need to reauth the Firebase connection.
+              return true;
+            }
+          }
+        }
+        return false;
+      }
 
       function onSuccess(googleUser) {
-        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        <
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName()); <
         meta http - equiv = "refresh"
         content = "0; url='https://shefalikumarr.github.io/Study-With-Me/signup.html'" / >
 
@@ -90,29 +131,29 @@
   <!-- <img class="studygirl" src="images/sun.png" alt="lamp.png"> -->
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAWyrdvxyrquRR1WPsBx-HOQC3G7i7POy0",
-    authDomain: "study-with-me-460bd.firebaseapp.com",
-    databaseURL: "https://study-with-me-460bd.firebaseio.com",
-    projectId: "study-with-me-460bd",
-    storageBucket: "study-with-me-460bd.appspot.com",
-    messagingSenderId: "883086576807",
-    appId: "1:883086576807:web:2add33506c9afd4ad2df82",
-    measurementId: "G-L9C2TR64CJ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
- <img class="studygirl" src="images/sun.png" alt="lamp.png">
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAWyrdvxyrquRR1WPsBx-HOQC3G7i7POy0",
+      authDomain: "study-with-me-460bd.firebaseapp.com",
+      databaseURL: "https://study-with-me-460bd.firebaseio.com",
+      projectId: "study-with-me-460bd",
+      storageBucket: "study-with-me-460bd.appspot.com",
+      messagingSenderId: "883086576807",
+      appId: "1:883086576807:web:2add33506c9afd4ad2df82",
+      measurementId: "G-L9C2TR64CJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <img class="studygirl" src="images/sun.png" alt="lamp.png">
 </body>
 
 </html>
